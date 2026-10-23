@@ -1,0 +1,30 @@
+{
+  "spring-v13.webp": {
+    "original_source": "legacy-v13/spritesheet-extended.webp",
+    "sha256": "9e413d51afe8c7fd00ca60f5cf3593feaa21de376178b72704bd4bd91958a245",
+    "unchanged_copy": true
+  },
+  "dozing.png": {
+    "original_source": "legacy-v13/dozing-sprites.png",
+    "sha256": "6b499d7407e807b061a58f555a849c56ba32b6c12001d208c56abe1afde91e00",
+    "unchanged_copy": true
+  },
+  "side-relax.png": {
+    "original_source": "legacy-v13/side-relax-sprites.png",
+    "sha256": "d31ffb1df4581d5f3f3f8a69350a4523e0b5182adc3cb058850e0818be42df5b",
+    "unchanged_copy": true
+  },
+  "canonical-v13.png": {
+    "original_source": "legacy-v13/reference-01.png",
+    "sha256": "c7168597798eb0100e602a6935d30cebb7dc620a9efe251f07dd4717dc3801f3",
+    "unchanged_copy": true
+  },
+  "lite/pet.json": {
+    "sha256": "6cb4d977dad42324968d7ef0dfaf09efcbb0f508f93c8cf129056b811afe91e3",
+    "unchanged_copy": true
+  },
+  "lite/spritesheet.webp": {
+    "sha256": "7949d9bcc03a45a6f1bcffc1421689a4e4bd8bf351ee010736045a8128725468",
+    "unchanged_copy": true
+  }
+}

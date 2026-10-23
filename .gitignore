@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.bak
+*.tmp
+.env*
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+publication/
+releases/
+desktop/build/*
+!desktop/build/*.py
+!desktop/build/*.ps1
+!desktop/build/windows-version.txt

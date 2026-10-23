@@ -1,0 +1,477 @@
+{
+  "cell_size": [
+    192,
+    208
+  ],
+  "sources": {
+    "atlas": "../../shared/sprites/spring-v13.webp",
+    "dozing": "../../shared/sprites/dozing.png"
+  },
+  "registration": {
+    "dozing": {
+      "scale": 0.8,
+      "x": 19,
+      "y": 68
+    }
+  },
+  "clips": {
+    "neutral": {
+      "cells": [
+        [
+          "atlas",
+          0,
+          0
+        ]
+      ],
+      "durations_ms": [
+        1000
+      ]
+    },
+    "breathing": {
+      "cells": [
+        [
+          "atlas",
+          0,
+          0
+        ],
+        [
+          "atlas",
+          0,
+          5
+        ],
+        [
+          "atlas",
+          0,
+          0
+        ]
+      ],
+      "durations_ms": [
+        1700,
+        1600,
+        1800
+      ]
+    },
+    "blink": {
+      "cells": [
+        [
+          "atlas",
+          0,
+          0
+        ],
+        [
+          "atlas",
+          0,
+          2
+        ],
+        [
+          "atlas",
+          0,
+          3
+        ],
+        [
+          "atlas",
+          0,
+          2
+        ],
+        [
+          "atlas",
+          0,
+          4
+        ],
+        [
+          "atlas",
+          0,
+          0
+        ]
+      ],
+      "durations_ms": [
+        100,
+        220,
+        180,
+        220,
+        230,
+        200
+      ],
+      "loop": false
+    },
+    "ear": {
+      "cells": [
+        [
+          "atlas",
+          0,
+          0
+        ],
+        [
+          "atlas",
+          0,
+          1
+        ],
+        [
+          "atlas",
+          0,
+          0
+        ]
+      ],
+      "durations_ms": [
+        200,
+        400,
+        350
+      ],
+      "loop": false
+    },
+    "wave": {
+      "cells": [
+        [
+          "atlas",
+          3,
+          0
+        ],
+        [
+          "atlas",
+          3,
+          1
+        ],
+        [
+          "atlas",
+          3,
+          2
+        ],
+        [
+          "atlas",
+          3,
+          3
+        ]
+      ],
+      "durations_ms": [
+        250,
+        450,
+        450,
+        650
+      ],
+      "loop": false
+    },
+    "loaf": {
+      "cells": [
+        [
+          "atlas",
+          6,
+          0
+        ],
+        [
+          "atlas",
+          6,
+          1
+        ],
+        [
+          "atlas",
+          6,
+          2
+        ],
+        [
+          "atlas",
+          6,
+          3
+        ],
+        [
+          "atlas",
+          6,
+          4
+        ],
+        [
+          "atlas",
+          6,
+          5
+        ]
+      ],
+      "durations_ms": [
+        1900,
+        1000,
+        1100,
+        1200,
+        1100,
+        1900
+      ]
+    },
+    "sleep": {
+      "cells": [
+        [
+          "dozing",
+          0,
+          0
+        ],
+        [
+          "dozing",
+          0,
+          1
+        ],
+        [
+          "dozing",
+          0,
+          2
+        ],
+        [
+          "dozing",
+          0,
+          3
+        ],
+        [
+          "dozing",
+          0,
+          4
+        ],
+        [
+          "dozing",
+          0,
+          5
+        ]
+      ],
+      "durations_ms": [
+        1800,
+        1300,
+        1400,
+        1400,
+        1400,
+        2100
+      ]
+    },
+    "wake": {
+      "cells": [
+        [
+          "atlas",
+          0,
+          3
+        ],
+        [
+          "atlas",
+          0,
+          2
+        ],
+        [
+          "atlas",
+          0,
+          4
+        ],
+        [
+          "atlas",
+          0,
+          0
+        ]
+      ],
+      "durations_ms": [
+        350,
+        350,
+        400,
+        400
+      ],
+      "loop": false
+    },
+    "look-00": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          0
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-01": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          1
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-02": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          2
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-03": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          3
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-04": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          4
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-05": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          5
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-06": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          6
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-07": {
+      "cells": [
+        [
+          "atlas",
+          9,
+          7
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-08": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          0
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-09": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          1
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-10": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          2
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-11": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          3
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-12": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          4
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-13": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          5
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-14": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          6
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    },
+    "look-15": {
+      "cells": [
+        [
+          "atlas",
+          10,
+          7
+        ]
+      ],
+      "durations_ms": [
+        2400
+      ],
+      "loop": false
+    }
+  }
+}

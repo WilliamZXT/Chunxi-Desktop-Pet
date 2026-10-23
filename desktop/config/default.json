@@ -1,0 +1,18 @@
+{
+  "version": "0.1.1",
+  "window": {"scale": 1.0, "always_on_top": true, "position": null},
+  "preferences": {"frequency": "normal"},
+  "behavior": {
+    "loaf_after_seconds": [50, 95],
+    "sleep_after_seconds": [210, 330],
+    "blink_interval_seconds": [12, 28],
+    "ear_interval_seconds": [65, 145],
+    "look_cooldown_seconds": [45, 100],
+    "click_cooldown_seconds": [30, 70],
+    "look_probability": 0.22,
+    "click_probability": 0.4,
+    "near_radius_pixels": 260,
+    "wake_seconds": 1.5
+  },
+  "interaction": {"poll_ms": 100, "mouse_move_threshold_pixels": 3, "drag_threshold_pixels": 6}
+}
