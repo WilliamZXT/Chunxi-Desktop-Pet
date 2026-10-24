@@ -34,7 +34,12 @@ class PortabilityTests(unittest.TestCase):
         for name,info in manifest.items():
             path=ROOT/name if name.startswith('lite/') else ROOT/'shared/sprites'/name
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),info['sha256'])
-            self.assertTrue(info['unchanged_copy'])
+            if name == 'dozing.png' and info.get('approved_edit'):
+                self.assertFalse(info['unchanged_copy'])
+                self.assertEqual(info['edit_scope'], 'left-temple-contour-only')
+                self.assertEqual(info['base_sha256'], '6b499d7407e807b061a58f555a849c56ba32b6c12001d208c56abe1afde91e00')
+            else:
+                self.assertTrue(info['unchanged_copy'])
         installed=Path.home()/'.codex/pets/chunxi'
         if all((installed/name).exists() for name in ('pet.json','spritesheet.webp')):
             for name in ('pet.json','spritesheet.webp'):
@@ -43,3 +48,4 @@ class PortabilityTests(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main(verbosity=2)
+

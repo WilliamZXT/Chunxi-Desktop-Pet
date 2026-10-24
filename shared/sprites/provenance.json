@@ -6,8 +6,12 @@
   },
   "dozing.png": {
     "original_source": "legacy-v13/dozing-sprites.png",
-    "sha256": "6b499d7407e807b061a58f555a849c56ba32b6c12001d208c56abe1afde91e00",
-    "unchanged_copy": true
+    "sha256": "fcb04d63850a5f4eb9796066219b95a3773e84debcd2bf19b5d98703051f18db",
+    "unchanged_copy": false,
+    "base_sha256": "6b499d7407e807b061a58f555a849c56ba32b6c12001d208c56abe1afde91e00",
+    "approved_edit": true,
+    "edit_scope": "left-temple-contour-only",
+    "note": "User-approved rounded viewer-left outline applied to all six frames; other pixels and poses preserved."
   },
   "side-relax.png": {
     "original_source": "legacy-v13/side-relax-sprites.png",
