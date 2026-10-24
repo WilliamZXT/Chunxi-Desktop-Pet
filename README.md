@@ -1,55 +1,102 @@
 # 春喜 · Chunxi Desktop Pet
 
-一只安静、懒洋洋、略微高冷的像素奶牛猫，默默陪你工作。基于 Python + PySide6 的独立 Windows 桌面宠物，不依赖 ChatGPT/Codex，也不需要联网。
+**[English](README.en.md) · [下载 v0.1.1](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1) · [使用指南](docs/USER-GUIDE.md) · [文档索引](docs/README.md)**
 
-**[v0.1.1 已正式发布](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1)。** [English](README.en.md)
+春喜是一只圆脸、金黄眼睛、安静又有点高冷的像素奶牛猫。Chunxi Desktop Pet 让它以轻微呼吸、偶尔观察和打盹的方式陪你工作。它是 Python + PySide6 编写的独立 Windows 桌宠，正常运行不依赖 ChatGPT/Codex，也不需要联网。
 
-## 看看春喜
+## 动态演示
 
 ### 坐姿 · 眨眼 · 耳朵动作
 
-![春喜坐姿、眨眼与耳朵动作演示](docs/media/idle-source.gif)
+![春喜坐姿、眨眼与耳朵动作](docs/media/idle-source.gif)
 
-### 趴着观察
+### 卧着观察 · Resting and watching
 
-![春喜趴着观察动画演示](docs/media/loaf-source.gif)
+![春喜卧着观察](docs/media/loaf-source.gif)
 
-趴着观察单独展示，透明演示画布为 240 × 256，六帧使用统一锚点，左右各保留至少 50 像素留白。角色像素保持原尺寸，未缩放、镜像或补画；一轮仍为 8.2 秒，与桌宠趴着观察动画时序一致。此调整仅用于 README 演示，不改变 Windows 程序或 Release。
+### 打盹 · Napping
 
-### 打盹
+![春喜打盹](docs/media/dozing-source.gif)
 
-![春喜打盹动画演示](docs/media/dozing-source.gif)
+[打盹单帧对照](docs/media/dozing-preview.png) · [全部演示与图片说明](docs/media/README.md)
 
-打盹演示使用与趴着观察一致的 240 × 256 透明画布，在等量扩边居中位置基础上向右微移 4 像素、向上微移 2 像素，以平衡左侧身体轮廓的视觉重量。六帧使用同一偏移，大小与原有花纹保持不变；左耳下方的外轮廓已按确认样式补圆，六帧同步修补。[查看同位置的单帧静态预览](docs/media/dozing-preview.png)。
-
-以上为桌宠已使用的原有动画素材预览（循环 GIF），不是自动行为的实时录像。演示播放速度不代表实际动作频率；运行时春喜会按随机间隔眨眼、耳抖，空闲后再进入趴着观察和打盹。除已确认的打盹左侧轮廓局部修补外，保留原有角色和动画。
+这些 GIF 展示已有动画素材，不是自动行为的实时录像；播放速度不代表实际动作间隔。演示对应当前 `main`，包含发布后的打盹轮廓局部修补；**已发布的 v0.1.1 Windows 附件未被替换**，其美术细节可能与当前源码演示不同。
 
 ## 下载与启动
 
-前往 **[v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1)**，下载 **[ChunxiDesktopPet-v0.1.1-win-x64.zip](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/ChunxiDesktopPet-v0.1.1-win-x64.zip)**，并用同批 **[SHA256SUMS.txt](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/SHA256SUMS.txt)** 核对。Windows x64 下载包已包含运行依赖。
+**当前正式版本：[v0.1.1](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1)。** Windows x64 用户下载 **[ChunxiDesktopPet-v0.1.1-win-x64.zip](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/ChunxiDesktopPet-v0.1.1-win-x64.zip)**，同时下载 **[SHA256SUMS.txt](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/SHA256SUMS.txt)**。
 
-1. 完整解压，退出旧春喜，再双击 ChunxiDesktopPet.exe。
-2. 保留整个文件夹，尤其是 _internal/。无需另装Python或管理员权限。
-3. 已有用户配置继续使用，不随源码或发布包上传。新用户使用出厂默认值，可通过右键设置修改大小与行为频率。
-4. 配置默认保存在 %LOCALAPPDATA%/ChunxiDesktopPet/config.json；右键“打开当前配置文件”可核对实际路径。
+1. 完整解压 ZIP，先退出旧春喜，再双击 `ChunxiDesktopPet.exe`。
+2. 保留整个文件夹，尤其是 `_internal/`；不要只移动 EXE，也不要在压缩包里直接运行。
+3. Windows 包包含运行依赖，无需安装 Python 或取得管理员权限。
+4. GitHub 自动生成的 **Source code (zip/tar.gz)** 是源码，不是可直接运行的 Windows 包。
+
+在下载目录打开 PowerShell，核对 Windows ZIP 对应行：
+
+```powershell
+Get-FileHash .\ChunxiDesktopPet-v0.1.1-win-x64.zip -Algorithm SHA256
+```
+
+输出应与同版校验文件中的对应值一致。校验文件还列有未单独上传的历史文件名，不代表这些文件都是 Release 附件，也不能用它校验持续更新的 README。详见 [SHA-256 指南](docs/CHECKSUMS.md)。包内附带文档为历史中文版本，部分说明过时；当前双语网页文档按实际构建差异说明。
+
+EXE 尚未签名，SmartScreen 可能提示未知发布者。核对来源和校验值；若出现威胁检测或策略拦截，应停止运行并反馈，不建议关闭防护。见 [Windows 安全说明](docs/SECURITY-AND-WINDOWS.md)。
+
+## 当前源码与发行包的区别
+
+本次核对了实际下载的 Windows 包。其 EXE SHA-256 为 `078c10350ad8c356bd3a7b34b16fa2421fe1806c9c8ce406e1756aaa6a32d1b8`，不是后来本机修整构建。**默认值相同不代表功能版本完全相同。**
+
+| 项目 | 已发布 v0.1.1 Windows 包 | 当前 main |
+|---|---|---|
+| 大小界面 | “设置…”内 50%–200% 数值框 | “调节大小…”滑块与设置，50%–300% |
+| 配置入口 | 无专用打开配置/参数帮助菜单 | 有打开配置与参数说明菜单 |
+| 暂停/恢复 | 勾选“暂停自动行为”暂停，取消勾选恢复 | 显示明确的暂停/恢复状态文案 |
+| 配置容错 | 有基础范围校验；非法 JSON/越界可能阻止启动，不具备后来安全恢复与备份实现 | 按字段校验、安全修正、提示和修复前备份 |
+| 打盹美术 | 原始发行素材 | 已确认左侧轮廓修补 |
+
+下方高级菜单与容错描述以当前源码为准。下载用户修改 JSON 前应先手动备份；不要以为原发行包会自动修复错误。本轮不更换附件，完整说明见 [使用指南](docs/USER-GUIDE.md)。
 
 ## 功能与操作
 
-- 透明、无边框窗口，可置顶、拖拽移动；拖拽不会同时触发点击。
-- 坐姿轻微呼吸，随机眨眼、耳抖；空闲后趴着观察、打盹，活动后缓慢醒来。
-- 鼠标靠近时偶尔观察；点击有概率眨眼或小幅抬爪，有冷却，部分重复反馈会跳过。
-- 右键宠物或托盘 → **调节大小…**：50%–300% 实时预览，保存记住，取消恢复。
-- **设置…**：大小、置顶、行为频率和可选登录启动；登录启动默认关闭。
-- **暂停自动行为 / 恢复自动行为（当前已暂停）**：控制状态调度，当前动画仍可播放。
-- **退出春喜**：关闭程序。**回到屏幕右下方**：找回位置。
+- 透明、无边框窗口；可置顶、拖拽，退出时记住位置，屏幕布局改变时尽量保持可见。
+- 坐姿轻微呼吸、随机眨眼与耳抖；空闲后卧着观察、打盹，检测到输入活动后缓慢醒来。
+- 鼠标进入附近范围时偶尔观察；点击有概率眨眼或轻抬爪，并有冷却。拖拽不会同时触发点击。
+- 右键春喜或托盘图标打开菜单。界面目前以中文显示，英文对照见 [使用指南](docs/USER-GUIDE.md)。
 
-## 默认行为
+以下菜单清单为当前源码；原发行包仅包含其中的设置、暂停勾选、位置恢复、日志和退出。
 
-眨眼12–28秒、耳抖65–145秒；空闲50–95秒趴着观察、210–330秒打盹。观察概率22%、冷却45–100秒；点击候选概率40%、冷却30–70秒。部分重复反馈会跳过。个人配置不纳入仓库和下载包，已有设置不会被默认模板覆盖。
+| 菜单 | 用途 |
+|---|---|
+| 调节大小… | 50%–300% 实时预览；保存记住，取消恢复 |
+| 设置… | 大小、始终置顶、行为频率、可选登录启动 |
+| 暂停自动行为 / 恢复自动行为（当前已暂停） | 暂停或恢复调度；当前动画仍可播放 |
+| 回到屏幕右下方 | 找回位置 |
+| 打开当前配置文件 / 配置参数说明 | 编辑实际配置或查看参数解释 |
+| 打开日志文件夹 | 获取排错记录，分享前移除个人路径 |
+| 退出春喜 | 正常关闭桌宠 |
 
-## 源码运行与打包
+登录启动默认关闭，只在勾选并保存后启用；移动程序后需重新保存启动设置。桌宠不包含 AI 对话、语音、重力或窗口边缘停留。
 
-Windows x64、Python 3.12，在 `desktop/` 目录执行：
+## 自动行为与行为配置
+
+以下为 [默认配置](desktop/config/default.json)，并非你的个人设置。`normal` 频率下：
+
+| 行为 | 默认条件 |
+|---|---|
+| 眨眼 / 耳抖 | 随机间隔 12–28 / 65–145 秒；受当前状态与其他动作影响 |
+| 卧着观察 / 打盹 | 总空闲时间达到随机阈值 50–95 / 210–330 秒 |
+| 醒来 | 检测到输入活动后约 1.5 秒 |
+| 鼠标观察 | 进入附近范围时有 22% 候选概率，冷却 45–100 秒 |
+| 点击互动 | 有 40% 候选概率，冷却 30–70 秒；部分重复反馈会跳过 |
+
+默认大小 `scale=1.0`；支持 `0.5–3.0`，`0.8` 是合法的 80% 大小。设置可选更安静、默认、稍多一些；行为频率不是“每次输入必定回应”。
+
+EXE 默认配置：`%LOCALAPPDATA%/ChunxiDesktopPet/config.json`；源码默认配置：`desktop/build/config.json`。`--config PATH` 指定实际使用的文件。运行环境可能重定向用户目录，以“打开当前配置文件”为准。有效用户值优先，升级不应拿默认模板覆盖个人设置。手动编辑后重启；界面保存立即生效。备份文件不会自动清理。
+
+大小、时间区间、概率、靠近半径、鼠标/拖拽阈值等完整说明与安全恢复规则见 [行为配置](docs/CONFIGURATION.md)。位置另外保存于运行目录下的 `runtime-state.json`，正常退出时写入。
+
+## 从源码运行与构建
+
+Windows x64、Python 3.12。从 `desktop/` 目录执行：
 
 ```powershell
 py -3.12 -m venv .venv
@@ -57,39 +104,27 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe .\run.py
 ```
 
-已有环境也可双击 `Start-Chunxi.cmd`。迁移源码后重建虚拟环境，不搬运旧 `.venv`。
+也可先运行 `setup.ps1`，再双击 `Start-Chunxi.cmd`。迁移源码后重建虚拟环境。PySide6 固定为 6.10.0。构建使用 PyInstaller 6.16.0 与 hooks 2026.9：
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -r requirements-build.txt
 .\build\build.ps1
 ```
 
-输出：`desktop/build/dist/v0.1.1/ChunxiDesktopPet/`。完整复制该文件夹，不能只分发 EXE。构建隔离外部工具 PATH，避免错误收集原生依赖。运行依赖 PySide6 6.10.0；构建依赖 PyInstaller 6.16.0、hooks 2026.9，见依赖清单。
+输出 `desktop/build/dist/v0.1.1/ChunxiDesktopPet/`，必须完整分发文件夹。详见 [开发与运行说明](desktop/README.md)。
 
-## 目录
+## 目录与文档
 
-```text
-lite/                 原有宿主宠物快照，未改变其行为接口
- desktop/             独立 Windows 桌宠
-  src/chunxi/         窗口、动画、状态机、交互、配置、设置、启动与显示处理
-  assets/             动画映射、应用图标
-  config/             默认配置模板
-  tests/              已有自动检查与本地检查驱动
-  build/              构建脚本和版本资源
-shared/sprites/       已确认的原始像素素材
- docs/                配置、检查摘要、限制、授权选项及演示
-```
+`desktop/` 为独立桌宠，`shared/sprites/` 为像素资源，`lite/` 保留原宿主宠物快照；Lite 不参与独立程序运行。文档入口：[使用](docs/USER-GUIDE.md)、[配置](docs/CONFIGURATION.md)、[已知问题](docs/KNOWN-ISSUES.md)、[安全](docs/SECURITY-AND-WINDOWS.md)、[检查范围](docs/TEST-REPORT.md)、[发布说明](docs/RELEASE-NOTES.md)、[更新记录](CHANGELOG.md)。
 
-## 限制与检查范围
+## 已知限制与反馈
 
-已有46项自动测试及实际 Windows EXE 启动、退出、配置恢复、重复启动、异常结束后重启和当前双屏检查记录。本次发布整理未新增测试项目或重新执行这些测试，见 [检查摘要](docs/TEST-REPORT.md)。
+姿态切换为离散帧；非整数缩放可能出现不等宽像素阶梯。尚未穷尽硬件热插拔、睡眠恢复、远程桌面和实际登录启动等环境。没有为本轮文档整理重跑运行或耐久测试；请区分历史验证与本轮链接/文档检查，见 [检查摘要](docs/TEST-REPORT.md)。
 
-EXE 未签名，可能出现未知发布者或 SmartScreen 提示。新二进制未重新做两小时耐久、Defender 扫描或独立干净电脑验收；未穷尽物理热插拔、睡眠恢复、远程桌面及登录启动。坐下/起身为离散姿态切换，非整数缩放可能有不等宽像素台阶；见 [已知限制](docs/KNOWN-ISSUES.md) 和 [Windows安全说明](docs/SECURITY-AND-WINDOWS.md)。
+通过 [GitHub Issues](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/issues) 反馈，附版本、Windows 版本、缩放比例、复现步骤和脱敏截图/日志；说明使用的是 Release 包还是当前源码。敏感安全问题先看 [SECURITY.md](SECURITY.md)。后续事项以已知问题和更新记录为准，目前没有承诺的新版本时间表。
 
-不包含 AI 对话、语音、重力或复杂物理。活动检测读取输入时间戳和鼠标位置，不记录键盘内容。
+## 授权
 
-## 授权与使用
+程序源码、测试及构建/启动脚本采用 [MIT License](LICENSE-CODE-MIT.txt)。春喜的角色设计、像素图、动画、图标、图集及其他美术素材不自动纳入 MIT，保留美术版权。用户可以下载、安装和使用官方桌宠程序；未经许可，美术素材不得单独提取、转载、修改、重新打包或用于商业产品。不添加 CC 或其他美术许可证。
 
-程序源码、测试和构建/启动脚本采用 [MIT License](LICENSE-CODE-MIT.txt)，Copyright (c) 2026 WilliamZXT。
-
-春喜的角色设计、像素图、动画帧、图标及其他美术素材不纳入 MIT，保留美术版权。用户可以下载、安装和使用官方桌宠程序；美术素材不得未经许可单独提取、转载、修改或用于其他商业产品。本项目未添加 CC BY-NC 或其他美术许可证。第三方组件按各自条款使用，声明保留在 THIRD-PARTY-NOTICES/。
+第三方组件遵循各自许可证，Windows 包内声明见 `THIRD-PARTY-NOTICES/`。详见 [授权边界](docs/LICENSE-OPTIONS.md)。

@@ -1,23 +1,25 @@
-# Windows Defender、SmartScreen与签名
+# Windows 安全说明 / Windows security notes
 
-## 本次实际记录
+## 签名与历史检查 / Signing and historical checks
 
-- EXE Authenticode状态为 `NotSigned`，没有用自签名冒充可信发布者。
-- 2026-10-22在Defender实时防护启用的本机，对v0.1.1分发目录做本地自定义扫描，命令完成，未发现与该目录匹配的威胁检测记录。
-- 没有关闭防护、添加排除项、改SmartScreen策略或上传素材到第三方扫描网站。
-- 没有把本地文件伪装为已从GitHub下载来宣称SmartScreen通过；真实公网下载信誉测试尚未进行。
+现有 v0.1.1 EXE 未签名。早期本地记录称，2026-10-22 在 Defender 实时保护启用时对一份 v0.1.1 分发目录执行了扫描，未发现匹配威胁记录；该记录没有足够的对应哈希证据证明它适用于后来最终上传的 Windows ZIP，因此不把它作为当前附件的扫描通过结论。本轮只整理文档，不运行新的防病毒或 SmartScreen 信誉测试。
 
-## 可能出现的提示
+The existing v0.1.1 EXE is unsigned. An earlier local record reports a Defender scan of a v0.1.1 distribution directory on 2026-10-22, with real-time protection enabled and no matching threat record. That record lacks sufficient hash linkage to establish coverage of the later uploaded Windows ZIP; it is not treated as a scan pass for the current asset. This pass edits documentation and runs no new antivirus or SmartScreen reputation test.
 
-未签名的新应用可能出现“未知发布者”或“Windows已保护你的电脑”等提示。SmartScreen会评估文件和发布者信誉；即使签名，新文件也可能在信誉建立前被提示。见 [Microsoft应用信誉说明](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation)。
+未关闭保护、添加排除项、改变 SmartScreen 策略，亦未把项目上传到第三方扫描网站。Defender 威胁扫描与 SmartScreen 下载信誉是不同检查；哈希一致也不等于安全保证。
 
-Defender恶意软件检测与SmartScreen下载信誉不是同一次检查，本机未检出不代表所有电脑和安全产品都会放行。
+Protection was not disabled, exclusions were not added, SmartScreen policies were not changed, and the project was not submitted to third-party scanning sites. Defender threat detection and SmartScreen download reputation are separate checks; a matching hash is not a safety guarantee.
 
-## 建议处理
+## 遇到提示时 / If Windows warns
 
-1. 从维护者的同版Release取得文件，不使用来源不明的重打包版本。
-2. 核对同版 `SHA256SUMS.txt`；可运行 `Get-FileHash .\ChunxiDesktopPet-v0.1.1-win-x64.zip -Algorithm SHA256`。
-3. 若有病毒检测或企业策略拦截，停止运行，保留版本、哈希、检测名称和截图，联系发布者核实。
-4. 不关闭Defender/SmartScreen，不为整个下载目录设置排除项，不把所有提示一概称为误报。
+1. 从 [官方 v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1) 取得原始 Windows ZIP，按 [校验指南](CHECKSUMS.md) 核对对应行。
+2. 未签名软件可能提示未知发布者。根据自己的信任判断决定是否运行；企业策略拦截或威胁检测时停止，并保留版本、哈希和检测名称反馈。
+3. 不建议关闭 Defender/SmartScreen 或排除整个下载目录，也不把所有检测一概称为误报。
 
-可信代码签名、Microsoft误报处理及对外授权由发布者安排。本次没有购买/借用证书，也没有替用户提交文件。
+1. Obtain the original Windows ZIP from the [official v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1) and compare its entry using the [checksum guide](CHECKSUMS.md).
+2. Unsigned software may show an unknown-publisher warning. Decide whether to run it based on your own trust assessment. Stop on an enterprise-policy block or threat detection and report the version, hash, and detection name.
+3. Do not disable Defender/SmartScreen or exclude the entire download folder; detections are not automatically false positives.
+
+Microsoft 对应用信誉的说明见 [SmartScreen 应用信誉](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation)。代码签名及误报提交由维护者另行安排，本轮未购买证书或代为提交文件。敏感问题见 [安全报告政策](../SECURITY.md)。
+
+See Microsoft's [SmartScreen app-reputation documentation](https://learn.microsoft.com/en-us/windows/apps/package-and-deploy/smartscreen-reputation). Code signing and false-positive submissions require separate maintainer action; this pass purchases no certificate and submits no files. See the [security reporting policy](../SECURITY.md) for sensitive issues.

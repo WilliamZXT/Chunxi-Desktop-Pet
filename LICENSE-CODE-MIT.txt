@@ -1,3 +1,5 @@
+适用范围：MIT 仅适用于程序源码、测试和构建/启动脚本，不适用于春喜角色设计、像素图、动画、图标、图集、Lite 美术及文档图片。美术使用边界见 docs/LICENSE-OPTIONS.md。第三方组件遵循各自许可证。
+
 Scope: This MIT license applies only to the application source code, tests, and build/startup scripts. It does not cover Chunxi character designs, pixel artwork, animation frames, icons, sprite sheets, Lite artwork, or documentation images. Third-party components remain subject to their own licenses.
 
 MIT License
