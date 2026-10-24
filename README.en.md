@@ -20,6 +20,8 @@ The loaf preview has its own row and a 240 × 256 transparent canvas. All six fr
 
 ![Chunxi dozing animation](docs/media/dozing-source.gif)
 
+The dozing preview uses the same 240 × 256 transparent canvas as the loaf preview. Relative to equal-padding placement, it is shifted 4 pixels right and 2 pixels up to balance the visual weight of the left-side body contour. All six frames share the same offset; character pixels and size are unchanged. [Compare the static frame at the same position](docs/media/dozing-preview.png).
+
 These looping GIFs preview existing animation assets used by the desktop pet; they are not a real-time recording of autonomous behavior. Preview speed does not represent actual action frequency. In the app, blinks and ear twitches occur at randomized intervals, with loafing and dozing after inactivity. No character artwork or animation was recreated.
 
 ## Download and run
