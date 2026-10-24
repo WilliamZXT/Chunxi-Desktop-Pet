@@ -2,13 +2,19 @@
 
 一只安静、懒洋洋、略微高冷的像素奶牛猫，默默陪你工作。基于 Python + PySide6 的独立 Windows 桌面宠物，不依赖 ChatGPT/Codex，也不需要联网。
 
-**v0.1.1：Release 草稿准备中，尚未正式发布。** [English](README.en.md)
+**[v0.1.1 已正式发布](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1)。** [English](README.en.md)
 
-![春喜坐姿](docs/media/sitting.png)
+## 看看春喜
+
+| 坐姿 · 眨眼 · 耳朵动作 | 猫饼 | 打盹 |
+| :---: | :---: | :---: |
+| ![春喜坐姿、眨眼与耳朵动作演示](docs/media/idle-source.gif) | ![春喜猫饼动画演示](docs/media/loaf-source.gif) | ![春喜打盹动画演示](docs/media/dozing-source.gif) |
+
+以上为桌宠已使用的原有动画素材预览（循环 GIF），不是自动行为的实时录像。演示播放速度不代表实际动作频率；运行时春喜会按随机间隔眨眼、耳抖，空闲后再进入猫饼和打盹。未重新制作角色或动画。
 
 ## 下载与启动
 
-发布后在本仓库的 **Releases → v0.1.1 → Assets** 下载 `ChunxiDesktopPet-v0.1.1-win-x64.zip`，并用同批 `SHA256SUMS.txt` 核对。仓库：[WilliamZXT/Chunxi-Desktop-Pet](https://github.com/WilliamZXT/Chunxi-Desktop-Pet)。[Releases](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases) 仅在正式发布后提供公开下载；草稿附件暂不可公开下载。
+前往 **[v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1)**，下载 **[ChunxiDesktopPet-v0.1.1-win-x64.zip](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/ChunxiDesktopPet-v0.1.1-win-x64.zip)**，并用同批 **[SHA256SUMS.txt](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/SHA256SUMS.txt)** 核对。Windows x64 下载包已包含运行依赖。
 
 1. 完整解压，退出旧春喜，再双击 ChunxiDesktopPet.exe。
 2. 保留整个文件夹，尤其是 _internal/。无需另装Python或管理员权限。
@@ -24,10 +30,6 @@
 - **设置…**：大小、置顶、行为频率和可选登录启动；登录启动默认关闭。
 - **暂停自动行为 / 恢复自动行为（当前已暂停）**：控制状态调度，当前动画仍可播放。
 - **退出春喜**：关闭程序。**回到屏幕右下方**：找回位置。
-
-![既有动画示例](docs/media/idle-source.gif)
-
-GIF 为既有素材演示，不是当前状态机的长时间行为录像；本版未重新生成角色或动画。
 
 ## 默认行为
 
