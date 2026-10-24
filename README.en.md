@@ -14,7 +14,7 @@ A quiet, relaxed pixel-art tuxedo cat that keeps you company while you work. Bui
 
 ![Chunxi loaf animation](docs/media/loaf-source.gif)
 
-The loaf preview has its own row, retaining the full 192 × 208 transparent canvas and six original frames. Its 8.2-second loop uses the desktop pet's loaf timing. The character was not mirrored or redrawn.
+The loaf preview has its own row and a 240 × 256 transparent canvas. All six frames share a fixed anchor with at least 50 pixels of space on each side. Character pixels stay at their original size, without scaling, mirroring, or redrawing. The loop remains 8.2 seconds, matching the desktop pet's loaf timing. This README-only adjustment does not change the Windows app or Release.
 
 ### Dozing
 
