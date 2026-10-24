@@ -6,9 +6,19 @@ A quiet, relaxed pixel-art tuxedo cat that keeps you company while you work. Bui
 
 ## Meet Chunxi
 
-| Sitting · blinking · ear movement | Loaf | Dozing |
-| :---: | :---: | :---: |
-| ![Chunxi sitting, blinking and moving its ears](docs/media/idle-source.gif) | ![Chunxi loaf animation](docs/media/loaf-source.gif) | ![Chunxi dozing animation](docs/media/dozing-source.gif) |
+### Sitting · blinking · ear movement
+
+![Chunxi sitting, blinking and moving its ears](docs/media/idle-source.gif)
+
+### Loaf
+
+![Chunxi loaf animation](docs/media/loaf-source.gif)
+
+The loaf preview has its own row, retaining the full 192 × 208 transparent canvas and six original frames. Its 8.2-second loop uses the desktop pet's loaf timing. The character was not mirrored or redrawn.
+
+### Dozing
+
+![Chunxi dozing animation](docs/media/dozing-source.gif)
 
 These looping GIFs preview existing animation assets used by the desktop pet; they are not a real-time recording of autonomous behavior. Preview speed does not represent actual action frequency. In the app, blinks and ear twitches occur at randomized intervals, with loafing and dozing after inactivity. No character artwork or animation was recreated.
 
