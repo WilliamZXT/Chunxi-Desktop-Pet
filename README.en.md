@@ -2,13 +2,19 @@
 
 A quiet, relaxed pixel-art tuxedo cat that keeps you company while you work. Built with Python and PySide6 for Windows; no ChatGPT/Codex host or network service is required.
 
-**v0.1.1: release draft in preparation, not publicly released.** [中文](README.md)
+**[v0.1.1 is available](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1).** [中文](README.md)
 
-![Chunxi](docs/media/sitting.png)
+## Meet Chunxi
+
+| Sitting · blinking · ear movement | Loaf | Dozing |
+| :---: | :---: | :---: |
+| ![Chunxi sitting, blinking and moving its ears](docs/media/idle-source.gif) | ![Chunxi loaf animation](docs/media/loaf-source.gif) | ![Chunxi dozing animation](docs/media/dozing-source.gif) |
+
+These looping GIFs preview existing animation assets used by the desktop pet; they are not a real-time recording of autonomous behavior. Preview speed does not represent actual action frequency. In the app, blinks and ear twitches occur at randomized intervals, with loafing and dozing after inactivity. No character artwork or animation was recreated.
 
 ## Download and run
 
-After publication, open this repository's **Releases → v0.1.1 → Assets**, download `ChunxiDesktopPet-v0.1.1-win-x64.zip`, and verify it using the accompanying `SHA256SUMS.txt`. Repository: [WilliamZXT/Chunxi-Desktop-Pet](https://github.com/WilliamZXT/Chunxi-Desktop-Pet). Public downloads will appear under [Releases](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases) after publication; draft assets are not public downloads.
+Open the **[v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/tag/v0.1.1)**, download **[ChunxiDesktopPet-v0.1.1-win-x64.zip](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/ChunxiDesktopPet-v0.1.1-win-x64.zip)**, and verify it using the accompanying **[SHA256SUMS.txt](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/releases/download/v0.1.1/SHA256SUMS.txt)**. The Windows x64 package includes the runtime dependencies.
 
 1. Extract the entire ZIP and retain _internal/ next to the EXE.
 2. Exit the older pet, then run ChunxiDesktopPet.exe.
@@ -24,10 +30,6 @@ After publication, open this repository's **Releases → v0.1.1 → Assets**, do
 - **设置…** controls size, topmost, frequency and optional login startup, disabled by default.
 - **暂停自动行为** pauses scheduling; **恢复自动行为（当前已暂停）** resumes it. Current animation can continue while scheduling is paused.
 - **退出春喜** exits. **回到屏幕右下方** restores a visible position.
-
-![Existing animation sample](docs/media/idle-source.gif)
-
-This GIF illustrates existing artwork, not a recording of autonomous long-term behavior. No artwork or animation was regenerated for this release.
 
 ## Factory defaults
 
