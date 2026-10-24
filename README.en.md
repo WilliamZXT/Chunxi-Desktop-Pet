@@ -10,19 +10,19 @@ A quiet, relaxed pixel-art tuxedo cat that keeps you company while you work. Bui
 
 ![Chunxi sitting, blinking and moving its ears](docs/media/idle-source.gif)
 
-### Loaf
+### Resting and watching
 
-![Chunxi loaf animation](docs/media/loaf-source.gif)
+![Chunxi resting and watching animation](docs/media/loaf-source.gif)
 
-The loaf preview has its own row and a 240 × 256 transparent canvas. All six frames share a fixed anchor with at least 50 pixels of space on each side. Character pixels stay at their original size, without scaling, mirroring, or redrawing. The loop remains 8.2 seconds, matching the desktop pet's loaf timing. This README-only adjustment does not change the Windows app or Release.
+The resting and watching preview has its own row and a 240 × 256 transparent canvas. All six frames share a fixed anchor with at least 50 pixels of space on each side. Character pixels stay at their original size, without scaling, mirroring, or redrawing. The loop remains 8.2 seconds, matching the desktop pet's resting-pose timing. This README-only adjustment does not change the Windows app or Release.
 
 ### Dozing
 
 ![Chunxi dozing animation](docs/media/dozing-source.gif)
 
-The dozing preview uses the same 240 × 256 transparent canvas as the loaf preview. Relative to equal-padding placement, it is shifted 4 pixels right and 2 pixels up to balance the visual weight of the left-side body contour. All six frames share the same offset; character pixels and size are unchanged. [Compare the static frame at the same position](docs/media/dozing-preview.png).
+The dozing preview uses the same 240 × 256 transparent canvas as the resting and watching preview. Relative to equal-padding placement, it is shifted 4 pixels right and 2 pixels up to balance the visual weight of the left-side body contour. All six frames share the same offset; character pixels and size are unchanged. [Compare the static frame at the same position](docs/media/dozing-preview.png).
 
-These looping GIFs preview existing animation assets used by the desktop pet; they are not a real-time recording of autonomous behavior. Preview speed does not represent actual action frequency. In the app, blinks and ear twitches occur at randomized intervals, with loafing and dozing after inactivity. No character artwork or animation was recreated.
+These looping GIFs preview existing animation assets used by the desktop pet; they are not a real-time recording of autonomous behavior. Preview speed does not represent actual action frequency. In the app, blinks and ear twitches occur at randomized intervals, with watchful resting and dozing after inactivity. No character artwork or animation was recreated.
 
 ## Download and run
 
@@ -36,7 +36,7 @@ Open the **[v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/rel
 ## Features and controls
 
 - Transparent, borderless, optionally always-on-top window; drag to move without also triggering clicks.
-- Gentle breathing, random blinks and ear twitches; loaf and doze after inactivity, then wake slowly on input.
+- Gentle breathing, random blinks and ear twitches; rest in a watchful lying pose and doze after inactivity, then wake slowly on input.
 - Occasional cursor observation and probabilistic click feedback with independent cooldowns. Repeated feedback may be skipped.
 - Right-click the cat or tray icon. **调节大小…** previews 50%–300% size; Save remembers it, Cancel restores size and position.
 - **设置…** controls size, topmost, frequency and optional login startup, disabled by default.
@@ -45,7 +45,7 @@ Open the **[v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/rel
 
 ## Factory defaults
 
-Blink: 12–28 seconds; ear twitch: 65–145 seconds. Loaf after 50–95 seconds and doze after 210–330 seconds of inactivity. Observation: 22% probability with 45–100 second cooldown. Click: 40% candidate probability with 30–70 second cooldown; repeated feedback may be skipped. Valid user preferences override defaults and are not distributed.
+Blink: 12–28 seconds; ear twitch: 65–145 seconds. Watchful resting after 50–95 seconds and doze after 210–330 seconds of inactivity. Observation: 22% probability with 45–100 second cooldown. Click: 40% candidate probability with 30–70 second cooldown; repeated feedback may be skipped. Valid user preferences override defaults and are not distributed.
 
 ## Run from source
 
