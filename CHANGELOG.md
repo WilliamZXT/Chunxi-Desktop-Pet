@@ -1,6 +1,6 @@
 # 更新记录 / Changelog
 
-## 发布后 main 整理 / Post-release main updates
+## 相对原始发行构建的后续修整 / Refinements relative to the original release build
 
 这些改动保留在当前源码和文档中，没有替换 v0.1.1 的 Windows 附件，也没有创建新版本。
 These changes are on current main without replacing the v0.1.1 Windows asset or creating a new version.
@@ -30,3 +30,7 @@ The [GitHub v0.1.1 Release](https://github.com/WilliamZXT/Chunxi-Desktop-Pet/rel
 
 历史版本不删除；版本号 0.1.0 若出现在用户旧配置中，不等同于当前程序版本。
 Historical versions are retained. A 0.1.0 schema label in an older personal configuration is not the current application version.
+
+标签来源补充：`v0.1.1` 标签指向 `453b74cf836b8de45056b32fbd7f3403bcba542f`，其应用源码与当前 main 相同，含原始 Windows 附件没有的后续功能，因此 GitHub 自动标签源码包不能视为该 EXE 的精确构建输入。本地历史源码归档（SHA-256 `a18e783ff250f536d4f70116afba1b92e5d4d25abc42db41bed395de0d69fd00`）的 11 个应用模块、启动入口与内嵌代码静态一致，9 项随包资源字节一致；该归档尚未公开附加，精确历史 Git 提交与可重复二进制构建未建立。
+
+Tag provenance: `v0.1.1` points to `453b74cf836b8de45056b32fbd7f3403bcba542f`. Its application source matches current main and includes later features absent from the original Windows attachment; GitHub's tag-source archive is therefore not the exact input for that EXE. A local historical source archive (SHA-256 `a18e783ff250f536d4f70116afba1b92e5d4d25abc42db41bed395de0d69fd00`) statically matches all 11 application modules and the entry point, with nine identical bundled resources. It is not publicly attached; its exact historical Git commit and a reproducible binary build are not established.

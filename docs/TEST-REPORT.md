@@ -33,3 +33,12 @@ Accelerated state checks and injected activity are not natural-duration enduranc
 This pass inspected embedded code in the public EXE without executing it. EXE hash: `078c10350ad8c356bd3a7b34b16fa2421fe1806c9c8ce406e1756aaa6a32d1b8`. Its size UI is 50%–200%, without current-main convenience menus or safe recovery/backups. Matching JSON defaults do not prove matching capabilities.
 
 Use the [SHA-256 guide](CHECKSUMS.md) for the published download. No new two-hour endurance, Defender, real public-download SmartScreen, independent clean-machine or actual login-startup acceptance is claimed for that asset. See [known issues](KNOWN-ISSUES.md) for remaining coverage gaps.
+
+## 最终来源核对 / Final provenance check
+
+标签来源补充：`v0.1.1` 标签指向 `453b74cf836b8de45056b32fbd7f3403bcba542f`，其应用源码与当前 main 相同，含原始 Windows 附件没有的后续功能，因此 GitHub 自动标签源码包不能视为该 EXE 的精确构建输入。本地历史源码归档（SHA-256 `a18e783ff250f536d4f70116afba1b92e5d4d25abc42db41bed395de0d69fd00`）的 11 个应用模块、启动入口与内嵌代码静态一致，9 项随包资源字节一致；该归档尚未公开附加，精确历史 Git 提交与可重复二进制构建未建立。
+
+Tag provenance: `v0.1.1` points to `453b74cf836b8de45056b32fbd7f3403bcba542f`. Its application source matches current main and includes later features absent from the original Windows attachment; GitHub's tag-source archive is therefore not the exact input for that EXE. A local historical source archive (SHA-256 `a18e783ff250f536d4f70116afba1b92e5d4d25abc42db41bed395de0d69fd00`) statically matches all 11 application modules and the entry point, with nine identical bundled resources. It is not publicly attached; its exact historical Git commit and a reproducible binary build are not established.
+
+另查阅到绑定已发布 EXE 哈希的历史运行记录：7200.281 秒完成，未加速或注入状态，记录无错误；不是本轮重跑，也不能用于当前 main 的后续构建。
+A historical run record tied to the published EXE hash completed after 7200.281 seconds, without acceleration/state injection or recorded errors. This was not rerun in this pass and does not validate later current-main builds.

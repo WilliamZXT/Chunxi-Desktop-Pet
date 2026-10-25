@@ -55,6 +55,8 @@ The actual downloaded EXE has SHA-256 `078c10350ad8c356bd3a7b34b16fa2421fe1806c9
 
 Advanced menu and recovery descriptions below refer to current source. Download users should manually back up JSON before editing; the original package must not be assumed to repair invalid settings automatically. This pass does not replace assets. See the [user guide](docs/USER-GUIDE.md).
 
+Tag provenance: `v0.1.1` points to `453b74cf836b8de45056b32fbd7f3403bcba542f`. Its application source matches current main and includes later features absent from the original Windows attachment; GitHub's tag-source archive is therefore not the exact input for that EXE. A local historical source archive (SHA-256 `a18e783ff250f536d4f70116afba1b92e5d4d25abc42db41bed395de0d69fd00`) statically matches all 11 application modules and the entry point, with nine identical bundled resources. It is not publicly attached; its exact historical Git commit and a reproducible binary build are not established.
+
 ## Features and controls
 
 - Transparent, borderless window with optional always-on-top behavior, drag-to-move, position memory on normal exit, and visibility adjustment when screen layouts change.
